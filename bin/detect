@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Google Cloud"
+echo "Pennywise Helper"
 exit 0
