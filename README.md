@@ -1,10 +1,8 @@
-# heroku-google-application-credentials-buildpack
-Generates a Google credential file based on Heroku Config Vars.
-
-This is useful when using a package such as [@google-cloud/storage](https://www.npmjs.com/package/@google-cloud/storage) which loads credentials from a file instead of an environmental variable.
+# pennywise-buildpack
+Generates critical config files for `pennywise` on Heroku using config vars, since the config files are left out of the GitHub repo it's pulling from.
 
 ## Usage
 
-1. Create Config Vars key `GOOGLE_CREDENTIALS` and paste the content of service account credential JSON file as is.
-
-The script with generate a file called `google-credentials.json` in `config` which holds the key from the step #1 above.
+- Set config var `GOOGLE_CREDENTIALS` as the contents of `google-credentials.json`.
+- Set config var `APP_CONFIG` as the contents of `config.js`.
+- Both files will be generated into the filesystem by the script upon deployment on Heroku. Easy peasy, lemon squeezy.
