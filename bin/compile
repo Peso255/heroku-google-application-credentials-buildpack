@@ -19,3 +19,16 @@ else
 echo "------> Missing value in GOOGLE_CREDENTIALS"
 
 fi
+
+if [ -f $ENV_DIR/APP_CONFIG ]
+then
+
+echo "------> Generating config.js"
+
+cat $ENV_DIR/APP_CONFIG >> $BUILD_DIR/config.js
+
+else
+
+echo "------> Missing value in APP_CONFIG"
+
+fi
